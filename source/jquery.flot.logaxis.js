@@ -131,6 +131,7 @@ formatters and transformers to and from logarithmic representation.
             var tickSize = plot.computeTickSize(min, max, noTicks),
                 customAxis = {min: min, max: max, tickSize: tickSize};
             ticks = $.plot.linearTickGenerator(customAxis);
+            ticks.shift();
         }
 
         return ticks;
@@ -166,7 +167,7 @@ formatters and transformers to and from logarithmic representation.
     with e representation
     */
     var logTickFormatter = function (value, axis, precision) {
-        var tenExponent = value > 0 ? Math.floor(Math.log(value) / Math.LN10) : 0;
+        var tenExponent = value > 0 ? Math.floor(Math.log(value) / Math.LN10)-1 : 0;
 
         if (precision) {
             if ((tenExponent >= -4) && (tenExponent <= 7)) {

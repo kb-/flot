@@ -77,7 +77,7 @@ Licensed under the MIT license.
         }
 
         if (axis.tickDecimals > 0) {
-            return x.toFixed(recomputePrecision(value, axis.tickDecimals)) + 'e' + tenExponent;
+            return x.toFixed(recomputePrecision(value, axis.tickDecimals+1)) + 'e' + tenExponent;
         }
         return x.toFixed() + 'e' + tenExponent;
     }

@@ -145,7 +145,7 @@
         var legendEl,
             height = Math.ceil(entries.length / options.legend.noColumns) * 1.6;
         if (!options.legend.container) {
-            legendEl = $('<div class="legend" style="position:absolute;' + pos + '">' + html.join('') + '</div>').appendTo(placeholder);
+            legendEl = $('<div class="legend flot-legend" style="position:absolute;' + pos + '">' + html.join('') + '</div>').appendTo(placeholder);
             legendEl.css('width', width + 'px');
             legendEl.css('height', height + 'em');
             legendEl.css('pointerEvents', 'none');
